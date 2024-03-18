@@ -1,0 +1,35 @@
+ALGORITHM checkpointalgo
+VAR
+    phrase : STRING
+    nbmots, vowels, character, i : INTEGER =0
+    n : INTEGER
+    word : INTEGER = 1
+BEGIN
+    n = phrase.lengh
+REPEAT
+    write(Please, write a sentence )
+    read (phrase)
+UNTIL (phrase [n]=".")
+    
+    tolowelcase(phrase)
+    
+
+    FOR i FROM 0 TO n STEP 1  DO
+        IF (phrase [i]=" ") THEN
+            word =+1
+        ELSE
+            character=+1
+        END_IF  
+        SWITCH (phrase[i]) DO
+                case "a" : vowels =+1 break ;
+                case "e" : vowels =+1 break ;
+                case "i" : vowels =+1 break ;
+                case "o" : vowels =+1 break ;
+                case "u" : vowels =+1 break ;
+                case "y" : vowels =+1 break ;
+                default : break
+            END_SWITCH
+        
+    END_FOR
+    write(word, vowels, character)
+END
